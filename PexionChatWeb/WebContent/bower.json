@@ -1,0 +1,36 @@
+{
+  "name": "pexionChat",
+  "description": "app para chat com bower",
+  "main": "js/main.js",
+  "moduleType": [],
+  "keywords": [
+    "estrela"
+  ],
+  "authors": [
+    "Jose fernando estrela"
+  ],
+  "license": "MIT",
+  "homepage": "/pages",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.1-rc.1",
+    "bootstrap": "~3.0.0",
+    "jquery": "~2.0.3",
+    "underscore": "~1.5.2"
+  },
+  {
+  "name": "angular-directive.g-signin",
+  "version": "0.1.1",
+  "license": "MIT",
+  "main": "./google-plus-signin.js",
+  "dependencies": {
+    "angular": "~1.2.0"
+  }
+}

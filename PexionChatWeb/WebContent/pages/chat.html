@@ -1,0 +1,24 @@
+
+<div class="row" ng-controller="chatController" id="chat" >
+	<div class="col-md-2 consoleLog historico listUser" ng-hide="noUser" id="listUser">
+		<small class="marker label label-default" >Usuarios onlines<span class="badge" id="contUser"></span></small>
+		<ul class="list-unstyled" id="list"></ul>
+	</div>
+	<div class="col-md-10" ng-hide="noUser">
+		<small class="marker label label-default">Historico de mensagens</small>
+		<button type="button" class="btn btn-success btn-xs" ng-click="doOpen()" >Connect</button>
+		<button type="button" class="btn btn-danger btn-xs" ng-click="doClose()">Disconnect</button>
+		<form class="ng-valid ng-dirty">
+			<div class="input-group">
+				<input class="input-sm form-control ng-valid ng-dirty" ng-model="newMessage" type="text" maxlength="100" ng-disabled="disabled">
+				<span class="input-group-btn">
+					<input class="input-sm btn btn-default" type="submit" ng-click="send(newMessage)"  value="Send" ng-disabled="disabled">
+				</span>
+			</div>
+		</form>
+		<div class="consoleLog" id="chat_history"  style="height:400px; background-color: white;" ></div>
+	</div>
+	<div ng-hide="!noUser" style="text-align: center;">
+		<button type="button" class="btn btn-danger" ng-click="goLogin()" >Voc&#234; est&#225; desconectado! retornar ao login.</button>
+	</div>
+</div>
