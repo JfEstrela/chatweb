@@ -126,16 +126,18 @@ angular.module("directive.g+signin").controller("chatController",
 	  }
 	  
 	  $scope.logout = function(){
+		  $scope.websocket.doSend("Desconectado!");
 		  chatAPI.logout();
 		  logout = true;
-		  $scope.websocket.close()
 		  $location.path("/login");
           window.location.href = $location.absUrl();
 		  
 	  }
 	  
 	  $scope.goLogin = function(){
-		  $scope.logout();
+		  logout = true;
+		  $location.path("/login");
+          window.location.href = $location.absUrl();
 	  }
 	  $scope.$on('event:google-plus-signin-success', function (event,authResult) { 
 		  chatAPI.login(authResult);
